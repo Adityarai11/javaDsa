@@ -9,9 +9,9 @@ public class javaprimeno {
                 isPrime = false;
             }
         }if (isPrime == true) {
-            System.out.println("n is prime no");
+            System.out.println(n +" is prime no");
         }else{
-            System.out.println("n is not prime no");
+            System.out.println(n + " is not prime no");
         }
 
         
