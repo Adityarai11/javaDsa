@@ -2,6 +2,9 @@
 //palindrome, 321 is not)
 public class palindrome{
     public static boolean Palindrome(int num){
+        if (num<0){
+            return false;
+        }
       int n = num;
         int ans = 0;
         while(num != 0){
