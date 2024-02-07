@@ -1,26 +1,26 @@
 package sorting;
 
-public class missingno {
+public class firstmissingpositive {
     public static void main(String[] args){
-        int nums [] ={-1,1,2,4};
-        System.out.println(missing(nums));
+        int nums [] ={1,2,3,4};
+        System.out.println(firstmissing(nums));
     }
-    public static int missing(int[] nums){
+    public static int firstmissing(int[] nums){
         int i = 0;
         while (i< nums.length){
             int currentindex = nums[i]-1;
-            if(nums[i]<nums.length && nums[i]!=nums[currentindex]) {
+            if(nums[i]> 0 && nums[i]<nums.length && nums[i]!=nums[currentindex]) {
                 int temp = nums[i];
                 nums[i] = nums[currentindex];
                 nums[currentindex] = temp;
             }else{
                 i++;
             }
-        }//missing positive no
+        }
         for(int index = 0 ; index< nums.length;index++){
-            if(nums[index]!=index){
-                return index;
+            if(nums[index]!=index+1){
+                return index+1;
             }
-        }return nums.length;
+        }return nums.length+1;
     }
 }
